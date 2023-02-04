@@ -1,25 +1,52 @@
 import React, { useState } from 'react';
+import Form from 'react-bootstrap/Form';
+
 
 
 function Test() {
     const [selectedOption, setSelectedOption] = useState("");
+    const [name, setName] = useState("");
+    const [surname, setSurname] = useState("");
+
+    const [description, setDescription] = useState("");
+
 
     const handleChange = (event) => {
         setSelectedOption(event.target.value);
     };
 
     return (
-        <div>
-            <div>
-                <p>Please enter your name and pick the Sectors you are currently involved in.</p>
-                Name:
-                <input type="text" /> <br />
-                Surname:
-                <input type="text" />
+        <div className="container text-center mt-4">
+            <div >
+                <h6 className='text-danger'>Please enter your name and pick the Sectors you are currently involved in.</h6>
+                <div>
+                    <label htmlFor="title" className="form-label">
+                        Name
+                    </label>
+                    <input type="text"
+                        className="form-control mb-2"
+                        id="name"
+                        placeholder="Enter your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required /> <br />
+                </div>
+                <div>
+                    <label htmlFor="title" className="form-label">
+                        Surname
+                    </label>
+                    <input type="text"
+                        className="form-control mb-2"
+                        id="surname"
+                        placeholder="Enter your surname"
+                        value={surname}
+                        onChange={(e) => setSurname(e.target.value)}
+                        required /> <br />
+                </div>
             </div>
             <form>
 
-                <label>
+                <label className='mb-2'>
                     Sectors:
                     <select value={selectedOption} onChange={handleChange}>
                         <option value="1">Manufacturing</option>
@@ -103,6 +130,16 @@ function Test() {
                         <option value="113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water</option>
                     </select>
                 </label>
+
+                <div>
+                    <Form.Check
+                        className='mb-2'
+                        type="checkbox"
+                        id="disabledFieldsetCheck"
+                        label="Agree to terms"
+                    />
+                </div>
+                <button className="btn btn-primary  ">Save</button>
             </form>
         </div>
     );
