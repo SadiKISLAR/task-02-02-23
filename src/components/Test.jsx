@@ -9,7 +9,6 @@ function Test() {
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
 
-    const [description, setDescription] = useState("");
 
 
     const handleChange = (event) => {
