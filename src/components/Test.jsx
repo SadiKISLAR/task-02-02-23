@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import axios from 'axios';
 
-
-
-
-function Test() {
-    const [selectedOption, setSelectedOption] = useState("");
+const Test = ({ getUser }) => {
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
+    const [selectedOption, setSelectedOption] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newUser = { name, surname, selectedOption };
+        addPerson(newUser);
+        setName("");
+        setSurname("");
+        setSelectedOption("");
+    };
+
+    //! POST - CRUD (Create)
+
+    const addPerson = async (newUser) => {
+        const url = "http://127.0.0.1:8000/test/";
+        try {
+            await axios.post(url, newUser);
+        } catch (error) {
+            console.log(error);
+        }
+        getUser();
+    };
 
 
-
-    const handleChange = (event) => {
-        setSelectedOption(event.target.value);
+    const handleChange = (e) => {
+        setSelectedOption(e.target.value);
     };
 
     return (
@@ -43,7 +61,7 @@ function Test() {
                         onChange={(e) => setSurname(e.target.value)}
                         required /> <br />
                 </div>
-                <form>
+                <form onSubmit={handleSubmit}>
 
                     <label className='mb-2 w-75 mx-auto text-center col-6 ' >
                         Sectors:
