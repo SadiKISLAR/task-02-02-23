@@ -5,15 +5,16 @@ import axios from 'axios';
 const Test = ({ getUser }) => {
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
-    const [selectedOption, setSelectedOption] = useState("");
+    const [sector, setSector] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newUser = { name, surname, selectedOption };
+        const newUser = { name, surname, sector };
         addPerson(newUser);
         setName("");
         setSurname("");
-        setSelectedOption("");
+        setSector();
+        console.log(newUser);
     };
 
     //! POST - CRUD (Create)
@@ -23,6 +24,7 @@ const Test = ({ getUser }) => {
         try {
             await axios.post(url, newUser);
         } catch (error) {
+            console.log(newUser);
             console.log(error);
         }
         getUser();
@@ -30,42 +32,42 @@ const Test = ({ getUser }) => {
 
 
     const handleChange = (e) => {
-        setSelectedOption(e.target.value);
+        setSector(e.target.value);
     };
 
     return (
         <div className="container w-75 mx-auto text-center mt-5 p-2 bg-secondary">
             <div className='row h-75  mx-auto text-center mt-5  '>
-                <h5 className='text-danger'>Please enter your name and pick the Sectors you are currently involved in.</h5>
-                <div className='col-6'>
-                    <label htmlFor="title" className="form-label">
-                        Name
-                    </label>
-                    <input type="text"
-                        className="form-control mb-2"
-                        id="name"
-                        placeholder="Enter your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required /> <br />
-                </div>
-                <div className='col-6' >
-                    <label htmlFor="title" className="form-label">
-                        Surname
-                    </label>
-                    <input type="text"
-                        className="form-control mb-2"
-                        id="surname"
-                        placeholder="Enter your surname"
-                        value={surname}
-                        onChange={(e) => setSurname(e.target.value)}
-                        required /> <br />
-                </div>
                 <form onSubmit={handleSubmit}>
+                    <h5 className='text-danger'>Please enter your name and pick the Sectors you are currently involved in.</h5>
+                    <div className='col-6'>
+                        <label htmlFor="title" className="form-label">
+                            Name
+                        </label>
+                        <input type="text"
+                            className="form-control mb-2"
+                            id="name"
+                            placeholder="Enter your name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required /> <br />
+                    </div>
+                    <div className='col-6' >
+                        <label htmlFor="title" className="form-label">
+                            Surname
+                        </label>
+                        <input type="text"
+                            className="form-control mb-2"
+                            id="surname"
+                            placeholder="Enter your surname"
+                            value={surname}
+                            onChange={(e) => setSurname(e.target.value)}
+                            required /> <br />
+                    </div>
 
                     <label className='mb-2 w-75 mx-auto text-center col-6 ' >
                         Sectors:
-                        <select value={selectedOption} onChange={handleChange}>
+                        <select value={setSector} onChange={(e) => setSector(e.target.value)}>
                             <option value="1">Manufacturing</option>
                             <option value="19">&nbsp;&nbsp;&nbsp;&nbsp;Construction materials</option>
                             <option value="18">&nbsp;&nbsp;&nbsp;&nbsp;Electronics and Optics</option>
@@ -156,11 +158,11 @@ const Test = ({ getUser }) => {
                             label="Agree to terms"
                         />
                     </div>
-                    <button className="btn btn-primary mb-2 w-25 ">Save</button>
+                    <button type='submit' className="btn btn-primary mb-2 w-25 ">Save</button>
                 </form>
             </div>
 
-        </div>
+        </div >
     );
 }
 

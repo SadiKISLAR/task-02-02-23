@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 
 function User({ user, getUsers }) {
-    const [selectedOption, setSelectedOption] = useState("");
+    const [sector, setSector] = useState("");
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
 
@@ -15,7 +15,7 @@ function User({ user, getUsers }) {
 
 
     const handleChange = (event) => {
-        setSelectedOption(event.target.value);
+        setSector(event.target.value);
     };
 
     return (
@@ -31,12 +31,12 @@ function User({ user, getUsers }) {
                 </thead>
                 <tbody>
                     {user?.map((item) => {
-                        const { id, name, surname, selectedOption } = item;
+                        const { id, name, surname, sector } = item;
                         return (
                             <tr key={id}>
                                 <td>{name}</td>
                                 <td>{surname}</td>
-                                <td>{selectedOption}</td>
+                                <td>{sector}</td>
                             </tr>
 
                         );
