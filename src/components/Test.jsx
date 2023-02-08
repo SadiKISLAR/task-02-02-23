@@ -37,7 +37,7 @@ const Test = ({ getUser }) => {
     };
 
     return (
-        <div className="container w-75 mx-auto text-center mt-5 p-2 bg-secondary">
+        <div className="container w-100 mx-auto text-center m-5 p-2 bg-secondary">
             <div className='row h-75  mx-auto text-center mt-5  '>
                 <form onSubmit={handleSubmit} className='row'>
                     <h5 className='text-danger'>Please enter your name and pick the Sectors you are currently involved in.</h5>
@@ -66,9 +66,9 @@ const Test = ({ getUser }) => {
                             required /> <br />
                     </div>
 
-                    <label className='mb-2 w-75 mx-auto text-center' >
+                    <label className='mb-2  mx-auto text-center  ' >
                         Sectors:
-                        <select value={sector} onChange={(e) => setSector(e.target.value)}>
+                        <select className='w-75' value={sector} onChange={(e) => setSector(e.target.value)}>
                             <option value="Manufacturing">Manufacturing</option>
                             <option value="Construction materials">&nbsp;&nbsp;&nbsp;&nbsp;Construction materials</option>
                             <option value="Electronics and Optics">&nbsp;&nbsp;&nbsp;&nbsp;Electronics and Optics</option>
@@ -151,9 +151,9 @@ const Test = ({ getUser }) => {
                         </select>
                     </label>
 
-                    <div className='mx-auto w-50 text-center'>
+                    <div className='mx-auto row text-center'>
                         <Form.Check
-                            className='mb-2 mx-auto text-center '
+                            className='mb-2 col-xs-12 mx-auto text-center '
                             type="checkbox"
                             id="disabledFieldsetCheck"
                             label="Agree to terms"

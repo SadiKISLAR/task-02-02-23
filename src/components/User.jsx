@@ -20,7 +20,7 @@ function User({ user, getUsers }) {
     };
 
     return (
-        <div className="container mt-4 w-75 bg-success">
+        <div className="container mt-4 bg-success">
             <table className="table table-striped">
                 <thead>
                     <tr>
