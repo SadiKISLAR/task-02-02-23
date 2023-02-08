@@ -131,23 +131,23 @@ const Test = ({ getUser }) => {
                             <option value="Wooden houses">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wooden houses</option>
                             <option value="Other">Other</option>
                             <option value="Creative industries">&nbsp;&nbsp;&nbsp;&nbsp;Creative industries</option>
-                            <option value="29">&nbsp;&nbsp;&nbsp;&nbsp;Energy technology</option>
-                            <option value="33">&nbsp;&nbsp;&nbsp;&nbsp;Environment</option>
-                            <option value="2">Service</option>
-                            <option value="25">&nbsp;&nbsp;&nbsp;&nbsp;Business services</option>
-                            <option value="35">&nbsp;&nbsp;&nbsp;&nbsp;Engineering</option>
-                            <option value="28">&nbsp;&nbsp;&nbsp;&nbsp;Information Technology and Telecommunications</option>
-                            <option value="581">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data processing, Web portals, E-marketing</option>
-                            <option value="576">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming, Consultancy</option>
-                            <option value="121">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software, Hardware</option>
-                            <option value="122">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telecommunications</option>
-                            <option value="22">&nbsp;&nbsp;&nbsp;&nbsp;Tourism</option>
-                            <option value="141">&nbsp;&nbsp;&nbsp;&nbsp;Translation services</option>
-                            <option value="21">&nbsp;&nbsp;&nbsp;&nbsp;Transport and Logistics</option>
-                            <option value="111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Air</option>
-                            <option value="114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rail</option>
-                            <option value="112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Road</option>
-                            <option value="113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water</option>
+                            <option value="Energy technology">&nbsp;&nbsp;&nbsp;&nbsp;Energy technology</option>
+                            <option value="Environment">&nbsp;&nbsp;&nbsp;&nbsp;Environment</option>
+                            <option value="Service">Service</option>
+                            <option value="Business services">&nbsp;&nbsp;&nbsp;&nbsp;Business services</option>
+                            <option value="Engineering">&nbsp;&nbsp;&nbsp;&nbsp;Engineering</option>
+                            <option value="Information Technology and Telecommunications">&nbsp;&nbsp;&nbsp;&nbsp;Information Technology and Telecommunications</option>
+                            <option value="Data processing, Web portals, E-marketing">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data processing, Web portals, E-marketing</option>
+                            <option value="Programming, Consultancy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming, Consultancy</option>
+                            <option value="oftware, Hardware">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software, Hardware</option>
+                            <option value="Telecommunications">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telecommunications</option>
+                            <option value="Tourism">&nbsp;&nbsp;&nbsp;&nbsp;Tourism</option>
+                            <option value="Translation services">&nbsp;&nbsp;&nbsp;&nbsp;Translation services</option>
+                            <option value="Transport and Logistics">&nbsp;&nbsp;&nbsp;&nbsp;Transport and Logistics</option>
+                            <option value="Air">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Air</option>
+                            <option value="Rail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rail</option>
+                            <option value="Road">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Road</option>
+                            <option value="Water">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water</option>
                         </select>
                     </label>
 
