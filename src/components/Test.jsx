@@ -21,7 +21,7 @@ const Test = ({ getUser }) => {
     //! POST - CRUD (Create)
 
     const addPerson = async (newUser) => {
-        const url = "https://bajoyom36999.pythonanywhere.com/admin/test/";
+        const url = "https://bajoyom36999.pythonanywhere.com/test/";
         try {
             await axios.post(url, newUser);
         } catch (error) {

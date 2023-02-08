@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
     const [users, setUsers] = useState([]);
 
-    const url = "https://bajoyom36999.pythonanywhere.com/admin/test/"
+    const url = "https://bajoyom36999.pythonanywhere.com/test/"
     const getUser = async () => {
         try {
             const { data } = await axios(url);
