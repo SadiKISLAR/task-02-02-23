@@ -7,13 +7,14 @@ const Test = ({ getUser }) => {
     const [surname, setSurname] = useState("");
     const [sector, setSector] = useState("");
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const newUser = { name, surname, sector };
         addPerson(newUser);
         setName("");
         setSurname("");
-        setSector();
+        setSector("1 = manufactoring");
         console.log(newUser);
     };
 
@@ -38,7 +39,7 @@ const Test = ({ getUser }) => {
     return (
         <div className="container w-75 mx-auto text-center mt-5 p-2 bg-secondary">
             <div className='row h-75  mx-auto text-center mt-5  '>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className='row'>
                     <h5 className='text-danger'>Please enter your name and pick the Sectors you are currently involved in.</h5>
                     <div className='col-6'>
                         <label htmlFor="title" className="form-label">
@@ -65,9 +66,9 @@ const Test = ({ getUser }) => {
                             required /> <br />
                     </div>
 
-                    <label className='mb-2 w-75 mx-auto text-center col-6 ' >
+                    <label className='mb-2 w-75 mx-auto text-center' >
                         Sectors:
-                        <select value={setSector} onChange={(e) => setSector(e.target.value)}>
+                        <select value={sector} onChange={(e) => setSector(e.target.value)}>
                             <option value="1">Manufacturing</option>
                             <option value="19">&nbsp;&nbsp;&nbsp;&nbsp;Construction materials</option>
                             <option value="18">&nbsp;&nbsp;&nbsp;&nbsp;Electronics and Optics</option>
@@ -150,15 +151,16 @@ const Test = ({ getUser }) => {
                         </select>
                     </label>
 
-                    <div className='mx-auto text-center col-6'>
+                    <div className='mx-auto w-50 text-center'>
                         <Form.Check
-                            className='mb-2 mx-auto text-center col-6'
+                            className='mb-2 mx-auto text-center '
                             type="checkbox"
                             id="disabledFieldsetCheck"
                             label="Agree to terms"
+                            required
                         />
                     </div>
-                    <button type='submit' className="btn btn-primary mb-2 w-25 ">Save</button>
+                    <button type='submit' className="btn btn-primary mx-auto mb-2 w-75 ">Save</button>
                 </form>
             </div>
 

@@ -1,6 +1,7 @@
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaCheck } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import React, { useState } from 'react';
+
 
 
 
@@ -37,6 +38,14 @@ function User({ user, getUsers }) {
                                 <td>{name}</td>
                                 <td>{surname}</td>
                                 <td>{sector}</td>
+                                <td className="text-center">
+                                    <FaCheck
+                                        size={20}
+                                        type="button"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#edit-modal"
+                                        className="me-2 text-warning" icon="fa-solid fa-check" />
+                                </td>
                             </tr>
 
                         );
