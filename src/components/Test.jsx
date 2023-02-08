@@ -151,9 +151,9 @@ const Test = ({ getUser }) => {
                         </select>
                     </label>
 
-                    <div className='mx-auto row text-center'>
+                    <div className='mx-auto w-50 row col-6 text-center'>
                         <Form.Check
-                            className='mb-2 col-xs-12 mx-auto text-center '
+                            className='mb-2 w-25 mx-auto text-center '
                             type="checkbox"
                             id="disabledFieldsetCheck"
                             label="Agree to terms"
