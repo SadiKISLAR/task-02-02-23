@@ -5,7 +5,7 @@ import axios from 'axios';
 const Test = ({ getUser }) => {
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
-    const [sector, setSector] = useState("1");
+    const [sector, setSector] = useState("");
 
 
     const handleSubmit = (e) => {
