@@ -4,13 +4,10 @@ import React, { useState } from 'react';
 
 
 
-
-
-
 function User({ user, getUsers }) {
-    const [sector, setSector] = useState("");
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
+    const [sector, setSector] = useState("");
 
 
 
